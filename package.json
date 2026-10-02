@@ -1,0 +1,17 @@
+{
+  "name": "book-check-widget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension showing Madrid public library availability on Goodreads",
+  "type": "module",
+  "scripts": {
+    "build": "tailwindcss -i src/styles/ui.css -o dist/ui.css --minify",
+    "watch": "tailwindcss -i src/styles/ui.css -o dist/ui.css --watch",
+    "libraries": "node tools/refresh-libraries.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "jsdom": "^30.1.1"
+  }
+}

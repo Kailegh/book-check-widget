@@ -1,0 +1,1732 @@
+[
+  {
+    "code": "RBMAJA",
+    "name": "AJALVIR. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMAJA/BMAJA1",
+    "name": "Biblioteca Municipal Dña. Lorenza Castro",
+    "parent": "RBMAJA"
+  },
+  {
+    "code": "RBMALM",
+    "name": "ALAMO. Biblioteca Municipal de El Álamo",
+    "parent": null
+  },
+  {
+    "code": "RBMALM/BMALM1",
+    "name": "Biblioteca Municipal de El Álamo",
+    "parent": "RBMALM"
+  },
+  {
+    "code": "RBMALC",
+    "name": "ALCALÁ DE HENARES. Bibliotecas Municipales Alcalá",
+    "parent": null
+  },
+  {
+    "code": "RBMALC/BMALC1",
+    "name": "B.P.M. Cardenal Cisneros",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALC/BMALC6",
+    "name": "B.P.M. José Chacón",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALC/BMALC8",
+    "name": "B.P.M. La Galatea",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALC/BMALC3",
+    "name": "B.P.M. María Moliner",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALC/BMALC2",
+    "name": "B.P.M. Pío Baroja",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALC/BMALC5",
+    "name": "B.P.M. Rafael Alberti",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALC/BMALC4",
+    "name": "B.P.M. Rosa Chacel",
+    "parent": "RBMALC"
+  },
+  {
+    "code": "RBMALB",
+    "name": "ALCOBENDAS. Mediatecas de Alcobendas",
+    "parent": null
+  },
+  {
+    "code": "RBMALB/BMALB3",
+    "name": "Mediateca Anabel Segura",
+    "parent": "RBMALB"
+  },
+  {
+    "code": "RBMALB/BMALB2",
+    "name": "Mediateca Centro de Arte",
+    "parent": "RBMALB"
+  },
+  {
+    "code": "RBMALB/BMALB4",
+    "name": "Mediateca Miguel Delibes",
+    "parent": "RBMALB"
+  },
+  {
+    "code": "RBMALB/BMALB1",
+    "name": "Mediateca Pablo Iglesias",
+    "parent": "RBMALB"
+  },
+  {
+    "code": "RBMALR",
+    "name": "ALCORCÓN. Bibliotecas Municipales de Alcorcón",
+    "parent": null
+  },
+  {
+    "code": "RBMALR/BMALR4",
+    "name": "Biblioteca Alcalde Jesús Salvador",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALR/BMALR1",
+    "name": "Biblioteca Almudena Grandes",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALR/BMALR5",
+    "name": "Biblioteca Ciudad de Nejapa",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALR/BMALR7",
+    "name": "Biblioteca Fuente Cisneros",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALR/BMALR3",
+    "name": "Biblioteca Joaquín Vilumbrales",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALR/BMALR2",
+    "name": "Biblioteca José Hierro",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALR/BMALR6",
+    "name": "Biblioteca Miguel Delibes",
+    "parent": "RBMALR"
+  },
+  {
+    "code": "RBMALD",
+    "name": "ALDEA DEL FRESNO. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMALD/BMALD1",
+    "name": "Centro de Lectura de Aldea del Fresno",
+    "parent": "RBMALD"
+  },
+  {
+    "code": "RBMALG",
+    "name": "ALGETE. Biblioteca Municipal de Algete",
+    "parent": null
+  },
+  {
+    "code": "RBMALG/BMALG1",
+    "name": "Biblioteca Municipal Miguel de Cervantes",
+    "parent": "RBMALG"
+  },
+  {
+    "code": "RBMALP",
+    "name": "ALPEDRETE. Biblioteca Municipal de Alpedrete",
+    "parent": null
+  },
+  {
+    "code": "RBMALP/BMALP1",
+    "name": "Biblioteca Municipal de Alpedrete",
+    "parent": "RBMALP"
+  },
+  {
+    "code": "RBMARA",
+    "name": "ARANJUEZ. Biblioteca Municipal de Aranjuez",
+    "parent": null
+  },
+  {
+    "code": "RBMARA/BMARA1",
+    "name": "Biblioteca Municipal Álvarez de Quindós",
+    "parent": "RBMARA"
+  },
+  {
+    "code": "RBMARG",
+    "name": "ARGANDA DEL REY. Bibliotecas Municipales de Arganda del Rey",
+    "parent": null
+  },
+  {
+    "code": "RBMARG/BMARG2",
+    "name": "Biblioteca Municipal Almudena Grandes",
+    "parent": "RBMARG"
+  },
+  {
+    "code": "RBMARG/BMARG1",
+    "name": "Biblioteca Municipal Pablo Neruda",
+    "parent": "RBMARG"
+  },
+  {
+    "code": "RBMARR",
+    "name": "ARROYOMOLINOS. Biblioteca Municipal de Arroyomolinos",
+    "parent": null
+  },
+  {
+    "code": "RBMARR/BMARR1",
+    "name": "Biblioteca Municipal de Arroyomolinos",
+    "parent": "RBMARR"
+  },
+  {
+    "code": "RBMBEC",
+    "name": "BECERRIL DE LA SIERRA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMBEC/BMBEC1",
+    "name": "Biblioteca Municipal de Becerril de la Sierra",
+    "parent": "RBMBEC"
+  },
+  {
+    "code": "RBMBOA",
+    "name": "BOADILLA DEL MONTE. Bibliotecas Municipales de Boadilla del Monte",
+    "parent": null
+  },
+  {
+    "code": "RBMBOA/BMBOA2",
+    "name": "Biblioteca Municipal José Ortega y Gasset",
+    "parent": "RBMBOA"
+  },
+  {
+    "code": "RBMBOA/BMBOA1",
+    "name": "Biblioteca Municipal Princesa Doña Leonor",
+    "parent": "RBMBOA"
+  },
+  {
+    "code": "RBMBRU",
+    "name": "BRUNETE. Biblioteca Municipal de Brunete",
+    "parent": null
+  },
+  {
+    "code": "RBMBRU/BMBRU1",
+    "name": "Biblioteca Municipal Dulce Chacón",
+    "parent": "RBMBRU"
+  },
+  {
+    "code": "RBMBUI",
+    "name": "BUITRAGO DE LOZOYA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMBUI/BMBUI1",
+    "name": "Biblioteca Municipal Eugenio Arias",
+    "parent": "RBMBUI"
+  },
+  {
+    "code": "RBMBUS",
+    "name": "BUSTARVIEJO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMBUS/BMBUS1",
+    "name": "Biblioteca Municipal Jorge Martínez Reverte",
+    "parent": "RBMBUS"
+  },
+  {
+    "code": "RBMCBR",
+    "name": "CABRERA. Biblioteca Municipal de La Cabrera",
+    "parent": null
+  },
+  {
+    "code": "RBMCBR/BMCBR1",
+    "name": "Biblioteca del Centro Comarcal de Humanidades Cardenal Gonzaga. Sierra Norte",
+    "parent": "RBMCBR"
+  },
+  {
+    "code": "RBMCAD",
+    "name": "CADALSO DE LOS VIDRIOS. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCAD/BMCAD1",
+    "name": "Biblioteca Municipal de Cadalso de los Vidrios",
+    "parent": "RBMCAD"
+  },
+  {
+    "code": "RBMCAE",
+    "name": "CAMARMA DE ESTERUELAS. Biblioteca Municipal de Camarma de Esteruelas",
+    "parent": null
+  },
+  {
+    "code": "RBMCAE/BMCAE1",
+    "name": "Biblioteca Municipal de Camarma de Esteruelas",
+    "parent": "RBMCAE"
+  },
+  {
+    "code": "RBMCAM",
+    "name": "CAMPO REAL. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCAM/BMCAM1",
+    "name": "Biblioteca Municipal de Campo Real",
+    "parent": "RBMCAM"
+  },
+  {
+    "code": "RBMCAÑ",
+    "name": "CARABAÑA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMCAÑ/BMCAÑ1",
+    "name": "Centro de Lectura de Carabaña",
+    "parent": "RBMCAÑ"
+  },
+  {
+    "code": "RBMCEN",
+    "name": "CENICIENTOS. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMCEN/BMCEN1",
+    "name": "Centro de Lectura de Cenicientos",
+    "parent": "RBMCEN"
+  },
+  {
+    "code": "RBMCED",
+    "name": "CERCEDILLA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCED/BMCED1",
+    "name": "Biblioteca Municipal Almudena Grandes",
+    "parent": "RBMCED"
+  },
+  {
+    "code": "RBMCHP",
+    "name": "CHAPINERÍA. Biblioteca Municipal de Chapinería",
+    "parent": null
+  },
+  {
+    "code": "RBMCHP/BMCHP1",
+    "name": "Biblioteca Municipal de Chapinería",
+    "parent": "RBMCHP"
+  },
+  {
+    "code": "RBMCHI",
+    "name": "CHINCHÓN. Biblioteca Municipal de Chinchón",
+    "parent": null
+  },
+  {
+    "code": "RBMCHI/BMCHI1",
+    "name": "Biblioteca Municipal Petra Ramírez",
+    "parent": "RBMCHI"
+  },
+  {
+    "code": "RBMCIE",
+    "name": "CIEMPOZUELOS. Biblioteca Municipal de Ciempozuelos",
+    "parent": null
+  },
+  {
+    "code": "RBMCIE/BMCIE1",
+    "name": "Biblioteca Municipal Almudena Grandes",
+    "parent": "RBMCIE"
+  },
+  {
+    "code": "RBMCOB",
+    "name": "COBEÑA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCOB/BMCOB1",
+    "name": "Biblioteca Municipal de Cobeña",
+    "parent": "RBMCOB"
+  },
+  {
+    "code": "RBMCOM",
+    "name": "COLLADO MEDIANO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCOM/BMCOM1",
+    "name": "Biblioteca Municipal de Collado Mediano",
+    "parent": "RBMCOM"
+  },
+  {
+    "code": "RBMCOV",
+    "name": "COLLADO VILLALBA. Biblioteca Municipales de Collado Villalba",
+    "parent": null
+  },
+  {
+    "code": "RBMCOV/BMCOV2",
+    "name": "Biblioteca Municipal Miguel Hernández",
+    "parent": "RBMCOV"
+  },
+  {
+    "code": "RBMCOV/BMCOV1",
+    "name": "Biblioteca Municipal Sancho Panza",
+    "parent": "RBMCOV"
+  },
+  {
+    "code": "RBMCOL",
+    "name": "COLMENAR DE OREJA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCOL/BMCOL1",
+    "name": "Biblioteca Municipal Padre Rojas",
+    "parent": "RBMCOL"
+  },
+  {
+    "code": "RBMCOA",
+    "name": "COLMENAR DEL ARROYO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCOA/BMCOA1",
+    "name": "Biblioteca Municipal Gabriel García Márquez",
+    "parent": "RBMCOA"
+  },
+  {
+    "code": "RBMCVI",
+    "name": "COLMENAR VIEJO. Bibliotecas Municipales de Colmenar Viejo",
+    "parent": null
+  },
+  {
+    "code": "RBMCVI/BMCVI1",
+    "name": "Biblioteca Municipal Miguel de Cervantes",
+    "parent": "RBMCVI"
+  },
+  {
+    "code": "RBMCVI/BMCVI2",
+    "name": "Biblioteca Municipal Pablo Ruiz Picasso",
+    "parent": "RBMCVI"
+  },
+  {
+    "code": "RBMCVI/BMCVI3",
+    "name": "Biblioteca Municipal Vargas Llosa",
+    "parent": "RBMCVI"
+  },
+  {
+    "code": "RBMCJO",
+    "name": "COLMENAREJO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCJO/BMCJO1",
+    "name": "Biblioteca Municipal de Colmenarejo",
+    "parent": "RBMCJO"
+  },
+  {
+    "code": "RBMCOS",
+    "name": "COSLADA. Bibliotecas Municipales de Coslada",
+    "parent": null
+  },
+  {
+    "code": "RBMCOS/BMCOS2",
+    "name": "Biblioteca Municipal La Jaramilla",
+    "parent": "RBMCOS"
+  },
+  {
+    "code": "RBMCOS/BMCOS1",
+    "name": "Biblioteca Municipal Luisa Carnés",
+    "parent": "RBMCOS"
+  },
+  {
+    "code": "RBMCUB",
+    "name": "CUBAS DE LA SAGRA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMCUB/BMCUB1",
+    "name": "Biblioteca Municipal Miguel Ángel Aguilar",
+    "parent": "RBMCUB"
+  },
+  {
+    "code": "RBMDAG",
+    "name": "DAGANZO DE ARRIBA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMDAG/BMDAG1",
+    "name": "Biblioteca Municipal Isabel Allende",
+    "parent": "RBMDAG"
+  },
+  {
+    "code": "RBMELO",
+    "name": "EL BOALO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMELO/BMELO1",
+    "name": "Biblioteca Municipal Carmen Martín Gaite",
+    "parent": "RBMELO"
+  },
+  {
+    "code": "RBMELE",
+    "name": "EL ESCORIAL. Biblioteca Municipal de El Escorial",
+    "parent": null
+  },
+  {
+    "code": "RBMELE/BMELE1",
+    "name": "Biblioteca Municipal de El Escorial",
+    "parent": "RBMELE"
+  },
+  {
+    "code": "RBMELM",
+    "name": "EL MOLAR. Biblioteca Municipal de El Molar",
+    "parent": null
+  },
+  {
+    "code": "RBMELM/BMELM1",
+    "name": "Biblioteca Municipal Blanca de Igual",
+    "parent": "RBMELM"
+  },
+  {
+    "code": "RBMFRE",
+    "name": "FRESNEDILLAS DE LA OLIVA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMFRE/BMFRE1",
+    "name": "Centro de Lectura de Fresnedillas de la Oliva",
+    "parent": "RBMFRE"
+  },
+  {
+    "code": "RBMFLB",
+    "name": "FUENLABRADA. Bibliotecas Municipales de Fuenlabrada",
+    "parent": null
+  },
+  {
+    "code": "RBMFLB/BMFLB1",
+    "name": "Biblioteca Municipal Antonio Machado",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFLB/BMFLB2",
+    "name": "Biblioteca Municipal El Arroyo",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFLB/BMFLB3",
+    "name": "Biblioteca Municipal Fernando de los Ríos",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFLB/BMFLB4",
+    "name": "Biblioteca Municipal José Manuel Caballero Bonald",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFLB/BMFLB5",
+    "name": "Biblioteca Municipal Loranca",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFLB/BMFLB6",
+    "name": "Biblioteca Municipal Parque de la Paz",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFLB/BMFLB7",
+    "name": "Biblioteca Municipal Tomás y Valiente",
+    "parent": "RBMFLB"
+  },
+  {
+    "code": "RBMFSZ",
+    "name": "FUENTE EL SAZ. Biblioteca Municipal de Fuente el Saz de Jarama",
+    "parent": null
+  },
+  {
+    "code": "RBMFSZ/BMFSZ1",
+    "name": "Biblioteca Municipal El Pilar",
+    "parent": "RBMFSZ"
+  },
+  {
+    "code": "RBMFNT",
+    "name": "FUENTIDUEÑA DE TAJO. Biblioteca Municipal de Fuentidueña de Tajo",
+    "parent": null
+  },
+  {
+    "code": "RBMFNT/BMFNT1",
+    "name": "Biblioteca Municipal Luis Cubero",
+    "parent": "RBMFNT"
+  },
+  {
+    "code": "RBMGAL",
+    "name": "GALAPAGAR. Biblioteca Municipal de Galapagar",
+    "parent": null
+  },
+  {
+    "code": "RBMGAL/BMGAL1",
+    "name": "Biblioteca Municipal Ricardo León",
+    "parent": "RBMGAL"
+  },
+  {
+    "code": "RBMGET",
+    "name": "GETAFE. Red de Bibliotecas Municipales de Getafe",
+    "parent": null
+  },
+  {
+    "code": "RBMGET/BMGET5",
+    "name": "Almudena Grandes",
+    "parent": "RBMGET"
+  },
+  {
+    "code": "RBMGET/BMGET4",
+    "name": "Carmen Martín Gaite",
+    "parent": "RBMGET"
+  },
+  {
+    "code": "RBMGET/BMGET1",
+    "name": "Jorge Luis Borges",
+    "parent": "RBMGET"
+  },
+  {
+    "code": "RBMGET/BMGET3",
+    "name": "José Luis Sampedro",
+    "parent": "RBMGET"
+  },
+  {
+    "code": "RBMGET/BMGET6",
+    "name": "Lorenzo Silva",
+    "parent": "RBMGET"
+  },
+  {
+    "code": "RBMGET/BMGET2",
+    "name": "Ricardo de la Vega",
+    "parent": "RBMGET"
+  },
+  {
+    "code": "RBMGRI",
+    "name": "GRIÑÓN. Biblioteca Municipal de Griñón",
+    "parent": null
+  },
+  {
+    "code": "RBMGRI/BMGRI1",
+    "name": "Biblioteca Municipal Casa de la Cultura",
+    "parent": "RBMGRI"
+  },
+  {
+    "code": "RBMGUA",
+    "name": "GUADALIX DE LA SIERRA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMGUA/BMGUA1",
+    "name": "Biblioteca Municipal José Manuel Fraile Gil",
+    "parent": "RBMGUA"
+  },
+  {
+    "code": "RBMGDR",
+    "name": "GUADARRAMA. Biblioteca Municipal de Guadarrama",
+    "parent": null
+  },
+  {
+    "code": "RBMGDR/BMGDR1",
+    "name": "Biblioteca Municipal Arcipreste de Hita",
+    "parent": "RBMGDR"
+  },
+  {
+    "code": "RBMHOY",
+    "name": "HOYO DE MANZANARES. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMHOY/BMHOY1",
+    "name": "Biblioteca Municipal Camilo José Cela",
+    "parent": "RBMHOY"
+  },
+  {
+    "code": "RBMHUM",
+    "name": "HUMANES DE MADRID. Biblioteca Municipal de Humanes de Madrid",
+    "parent": null
+  },
+  {
+    "code": "RBMHUM/BMHUM1",
+    "name": "Biblioteca Municipal Lorenzo Silva",
+    "parent": "RBMHUM"
+  },
+  {
+    "code": "RBMLRO",
+    "name": "LAS ROZAS DE MADRID. Bibliotecas Municipales",
+    "parent": null
+  },
+  {
+    "code": "RBMLRO/BMLRO2",
+    "name": "B.M. Las Matas Marga Gil Roësset",
+    "parent": "RBMLRO"
+  },
+  {
+    "code": "RBMLRO/BMLRO1",
+    "name": "B.M. Las Rozas José Ortega y Gasset",
+    "parent": "RBMLRO"
+  },
+  {
+    "code": "RBMLRO/BMLRO3",
+    "name": "B.M. Leon Tolstoi",
+    "parent": "RBMLRO"
+  },
+  {
+    "code": "RBMLEG",
+    "name": "LEGANÉS. Bibliotecas Municipales",
+    "parent": null
+  },
+  {
+    "code": "RBMLEG/BMLEG1",
+    "name": "Biblioteca Central de Leganés",
+    "parent": "RBMLEG"
+  },
+  {
+    "code": "RBMLEG/BMLEG3",
+    "name": "Biblioteca Municipal Enrique Tierno Galván",
+    "parent": "RBMLEG"
+  },
+  {
+    "code": "RBMLEG/BMLEG2",
+    "name": "Biblioteca Municipal Julián Besteiro",
+    "parent": "RBMLEG"
+  },
+  {
+    "code": "RBMLEG/BMLEG4",
+    "name": "Biblioteca Municipal Julio Caro Baroja",
+    "parent": "RBMLEG"
+  },
+  {
+    "code": "RBMLEG/BMLEG5",
+    "name": "Biblioteca Municipal Rigoberta Menchú",
+    "parent": "RBMLEG"
+  },
+  {
+    "code": "RBMLEG/BMLEG6",
+    "name": "Biblioteca Municipal Santiago Amón",
+    "parent": "RBMLEG"
+  },
+  {
+    "code": "RBMLOE",
+    "name": "LOECHES. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMLOE/BMLOE1",
+    "name": "Biblioteca Municipal de Loeches",
+    "parent": "RBMLOE"
+  },
+  {
+    "code": "RBMLMO",
+    "name": "LOS MOLINOS. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMLMO/BMLMO1",
+    "name": "Biblioteca Municipal de Los Molinos",
+    "parent": "RBMLMO"
+  },
+  {
+    "code": "RBMLOY",
+    "name": "LOZOYUELA-NAVAS-SIETEIGLESIAS. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMLOY/BMLOY1",
+    "name": "Centro de Lectura de Lozoyuela-Navas-Sieteiglesias",
+    "parent": "RBMLOY"
+  },
+  {
+    "code": "BPM",
+    "name": "MADRID. Bibliotecas Públicas",
+    "parent": null
+  },
+  {
+    "code": "BPM/BCDIU",
+    "name": "ARGANZUELA. BP Pío Baroja",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIG",
+    "name": "BARAJAS. BP Gloria Fuertes",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIB",
+    "name": "CARABANCHEL. BP Ana María Matute",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIM",
+    "name": "CARABANCHEL. BP La Chata",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP04",
+    "name": "CARABANCHEL. BP Luis Rosales",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI10",
+    "name": "CARABANCHEL. BP Victoria Prego",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIX",
+    "name": "CENTRO. BP Benito Pérez Galdós",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI4",
+    "name": "CENTRO. BP Iván de Vargas",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI7",
+    "name": "CENTRO. BP Mario Vargas LLosa",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP06",
+    "name": "CENTRO. BP Pedro Salinas",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIZ",
+    "name": "CHAMARTÍN. BP Dámaso Alonso",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIF",
+    "name": "CHAMARTÍN. BP Francisco Ibañez",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP05",
+    "name": "CHAMBERÍ. BP José Luis Sampedro",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP17",
+    "name": "CHAMBERÍ. BP Ruiz Egea",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIS",
+    "name": "CIUDAD LINEAL. BP Ciudad Lineal",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDID",
+    "name": "CIUDAD LINEAL. BP La Elipa",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIL",
+    "name": "CIUDAD LINEAL. BP Pablo Neruda",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIR",
+    "name": "FUENCARRAL-EL PARDO. BP José Saramago",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP08",
+    "name": "FUENCARRAL-EL PARDO. BP Rafael Alberti",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP09",
+    "name": "HORTALEZA. BP Hortaleza",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIA",
+    "name": "HORTALEZA. BP Huerta de la Salud",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI8",
+    "name": "HORTALEZA. BP María Lejárraga",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIK",
+    "name": "LATINA. BP Aluche",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI3",
+    "name": "LATINA. BP Ángel González",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP10",
+    "name": "LATINA. BP Antonio Mingote",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP02",
+    "name": "MONCLOA-ARAVACA. BP Acuña",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP13",
+    "name": "MORATALAZ. BP Javier Marías",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIH",
+    "name": "MORATALAZ. BP Miguel Delibes",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP19",
+    "name": "PUENTE DE VALLECAS. BP Miguel Hernández",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP14",
+    "name": "PUENTE DE VALLECAS. BP Paco Rabal",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIJ",
+    "name": "PUENTE DE VALLECAS. BP Portazgo",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIV",
+    "name": "PUENTE DE VALLECAS. BP Vallecas",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP16",
+    "name": "RETIRO. BP Elena Fortún",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI5",
+    "name": "RETIRO. BP Eugenio Trías",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIN",
+    "name": "SALAMANCA. BP David Gistau",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIC",
+    "name": "SAN BLAS. BP Canillejas",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIW",
+    "name": "SAN BLAS. BP José Hierro",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIO",
+    "name": "SAN BLAS. BP San Blas",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI2",
+    "name": "TETUÁN. BP Manuel Vázquez Montalbán",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIT",
+    "name": "TETUÁN. BP María Zambrano",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDII",
+    "name": "USERA. BP Gabriel García Márquez",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP18",
+    "name": "USERA. BP José Hierro",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI6",
+    "name": "USERA. BP San Fermín",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIP",
+    "name": "VICÁLVARO. BP Francisco Ayala",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDIE",
+    "name": "VICÁLVARO. BP Vicálvaro",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI11",
+    "name": "VILLA DE VALLECAS. BP Benjamín Palencia",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP20",
+    "name": "VILLA DE VALLECAS. BP Luis Martín Santos",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BCDI9",
+    "name": "VILLAVERDE. BP Francisco Umbral",
+    "parent": "BPM"
+  },
+  {
+    "code": "BPM/BP21",
+    "name": "VILLAVERDE. BP María Moliner",
+    "parent": "BPM"
+  },
+  {
+    "code": "RBMMAJ",
+    "name": "MAJADAHONDA. Biblioteca Municipal de Majadahonda",
+    "parent": null
+  },
+  {
+    "code": "RBMMAJ/BMMAJ1",
+    "name": "Biblioteca Municipal Francisco Umbral",
+    "parent": "RBMMAJ"
+  },
+  {
+    "code": "RBMMAN",
+    "name": "MANZANARES EL REAL. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMMAN/BMMAN1",
+    "name": "Biblioteca Municipal Concha Méndez",
+    "parent": "RBMMAN"
+  },
+  {
+    "code": "RBMMEC",
+    "name": "MECO. Biblioteca Municipal de Meco",
+    "parent": null
+  },
+  {
+    "code": "RBMMEC/BMMEC1",
+    "name": "Biblioteca Municipal de Meco",
+    "parent": "RBMMEC"
+  },
+  {
+    "code": "RBMMEJ",
+    "name": "MEJORADA DEL CAMPO. Biblioteca Municipal de Mejorada del Campo",
+    "parent": null
+  },
+  {
+    "code": "RBMMEJ/BMMEJ1",
+    "name": "Biblioteca Municipal Almudena Grandes",
+    "parent": "RBMMEJ"
+  },
+  {
+    "code": "RBMMIR",
+    "name": "MIRAFLORES DE LA SIERRA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMMIR/BMMIR1",
+    "name": "Bilbioteca Municipal de Miraflores de la Sierra",
+    "parent": "RBMMIR"
+  },
+  {
+    "code": "RBMMOR",
+    "name": "MORALEJA DE ENMEDIO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMMOR/BMMOR1",
+    "name": "Biblioteca Municipal de Moraleja de Enmedio",
+    "parent": "RBMMOR"
+  },
+  {
+    "code": "RBMMRZ",
+    "name": "MORALZARZAL. Biblioteca Municipal de Moralzarzal",
+    "parent": null
+  },
+  {
+    "code": "RBMMRZ/BMMRZ1",
+    "name": "Biblioteca Municipal Casa Grande",
+    "parent": "RBMMRZ"
+  },
+  {
+    "code": "RBMMRT",
+    "name": "MORATA DE TAJUÑA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMMRT/BMMRT1",
+    "name": "Bilbioteca Municipal de Morata de Tajuña",
+    "parent": "RBMMRT"
+  },
+  {
+    "code": "RBMMOS",
+    "name": "MÓSTOLES. Bibliotecas Municipales",
+    "parent": null
+  },
+  {
+    "code": "RBMMOS/BMMOS1",
+    "name": "B. Móstoles CENTRAL ALMUDENA GRANDES",
+    "parent": "RBMMOS"
+  },
+  {
+    "code": "RBMMOS/BMMOS6",
+    "name": "B. Móstoles COIMBRA",
+    "parent": "RBMMOS"
+  },
+  {
+    "code": "RBMMOS/BMMOS2",
+    "name": "B. Móstoles EL SOTO",
+    "parent": "RBMMOS"
+  },
+  {
+    "code": "RBMMOS/BMMOS3",
+    "name": "B. Móstoles JOAN MIRÓ",
+    "parent": "RBMMOS"
+  },
+  {
+    "code": "RBMMOS/BMMOS5",
+    "name": "B. Móstoles NORTE-UNIVERSIDAD",
+    "parent": "RBMMOS"
+  },
+  {
+    "code": "RBMNAV",
+    "name": "NAVACERRADA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMNAV/BMNAV1",
+    "name": "Biblioteca Municipal de Navacerrada",
+    "parent": "RBMNAV"
+  },
+  {
+    "code": "RBMNVF",
+    "name": "NAVALAFUENTE. Centro de lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMNVF/BMNVF1",
+    "name": "Centro de Lectura de Navalafuente",
+    "parent": "RBMNVF"
+  },
+  {
+    "code": "RBMNVL",
+    "name": "NAVALAGAMELLA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMNVL/BMNVL1",
+    "name": "Centro de Lectura de Navalagamella",
+    "parent": "RBMNVL"
+  },
+  {
+    "code": "RBMNAL",
+    "name": "NAVALCARNERO. Biblioteca Municipal de Navalcarnero",
+    "parent": null
+  },
+  {
+    "code": "RBMNAL/BMNAL1",
+    "name": "Biblioteca Municipal José María Bausá",
+    "parent": "RBMNAL"
+  },
+  {
+    "code": "RBMNVR",
+    "name": "NAVAS DEL REY. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMNVR/BMNVR1",
+    "name": "Biblioteca Municipal Marisa Garcelán",
+    "parent": "RBMNVR"
+  },
+  {
+    "code": "RBMPAJ",
+    "name": "PARACUELLOS DE JARAMA. Biblioteca Municipal de Paracuellos de Jarama",
+    "parent": null
+  },
+  {
+    "code": "RBMPAJ/BMPAJ1",
+    "name": "Biblioteca Municipal de Paracuellos de Jarama",
+    "parent": "RBMPAJ"
+  },
+  {
+    "code": "RBMPAR",
+    "name": "PARLA. Bibliotecas Municipales de Parla",
+    "parent": null
+  },
+  {
+    "code": "RBMPAR/BMPAR1",
+    "name": "Biblioteca Municipal Gloria Fuertes",
+    "parent": "RBMPAR"
+  },
+  {
+    "code": "RBMPAR/BMPAR2",
+    "name": "Biblioteca Municipal Isaac Albéniz",
+    "parent": "RBMPAR"
+  },
+  {
+    "code": "RBMPAT",
+    "name": "PATONES. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMPAT/BMPAT1",
+    "name": "Centro de Lectura de Patones",
+    "parent": "RBMPAT"
+  },
+  {
+    "code": "RBMPED",
+    "name": "PEDREZUELA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMPED/BMPED1",
+    "name": "Biblioteca Municipal de Pedrezuela",
+    "parent": "RBMPED"
+  },
+  {
+    "code": "RBMPER",
+    "name": "PERALES DE TAJUÑA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMPER/BMPER1",
+    "name": "Centro de Lectura de Perales de Tajuña",
+    "parent": "RBMPER"
+  },
+  {
+    "code": "RBMPNT",
+    "name": "PINTO. Bibliotecas Municipales de Pinto",
+    "parent": null
+  },
+  {
+    "code": "RBMPNT/BMPNT1",
+    "name": "Biblioteca Municipal Casa de la Cadena (CERRADA TEMPORALMENTE)",
+    "parent": "RBMPNT"
+  },
+  {
+    "code": "RBMPNT/BMPNT2",
+    "name": "Biblioteca Municipal Javier Lapeña",
+    "parent": "RBMPNT"
+  },
+  {
+    "code": "RBMPOZ",
+    "name": "POZUELO DE ALARCÓN. Bibliotecas Municipales",
+    "parent": null
+  },
+  {
+    "code": "RBMPOZ/BMPOZ3",
+    "name": "Biblioteca Municipal Benito Pérez Galdós",
+    "parent": "RBMPOZ"
+  },
+  {
+    "code": "RBMPOZ/BMPOZ1",
+    "name": "Biblioteca Municipal Miguel de Cervantes",
+    "parent": "RBMPOZ"
+  },
+  {
+    "code": "RBMPOZ/BMPOZ2",
+    "name": "Biblioteca Municipal Rosalía de Castro",
+    "parent": "RBMPOZ"
+  },
+  {
+    "code": "RBMQUI",
+    "name": "QUIJORNA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMQUI/BMQUI1",
+    "name": "QUIJORNA. Centro de Lectura",
+    "parent": "RBMQUI"
+  },
+  {
+    "code": "RBMRAS",
+    "name": "RASCAFRÍA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMRAS/BMRAS1",
+    "name": "Biblioteca Municipal Valle del Paular",
+    "parent": "RBMRAS"
+  },
+  {
+    "code": "RBMRIB",
+    "name": "RIBATEJADA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMRIB/BMRIB1",
+    "name": "Centro de Lectura de Ribatejada",
+    "parent": "RBMRIB"
+  },
+  {
+    "code": "RBMRVM",
+    "name": "RIVAS VACIAMADRID. Bibliotecas Municipales de Rivas Vaciamadrid",
+    "parent": null
+  },
+  {
+    "code": "RBMRVM/BMRVM3",
+    "name": "B.M. Almudena Grandes",
+    "parent": "RBMRVM"
+  },
+  {
+    "code": "RBMRVM/BMRVM1",
+    "name": "B.M. Federico García Lorca",
+    "parent": "RBMRVM"
+  },
+  {
+    "code": "RBMRVM/BMRVM4",
+    "name": "B.M. Gloria Fuertes",
+    "parent": "RBMRVM"
+  },
+  {
+    "code": "RBMRVM/BMRVM2",
+    "name": "B.M. José Saramago",
+    "parent": "RBMRVM"
+  },
+  {
+    "code": "RBMROB",
+    "name": "ROBLEDO DE CHAVELA. Biblioteca Municipal de Robledo de Chavela",
+    "parent": null
+  },
+  {
+    "code": "RBMROB/BMROB1",
+    "name": "Biblioteca Municipal Antoniorrobles",
+    "parent": "RBMROB"
+  },
+  {
+    "code": "RBMSAG",
+    "name": "SAN AGUSTÍN DE GUADALIX. Biblioteca Municipal de San Agustín de Guadalix",
+    "parent": null
+  },
+  {
+    "code": "RBMSAG/BMSAG1",
+    "name": "Biblioteca Municipal Agustín de Tagaste",
+    "parent": "RBMSAG"
+  },
+  {
+    "code": "RBMSFH",
+    "name": "SAN FERNANDO DE HENARES. Bibliotecas Municipales de San Fernando de Henares",
+    "parent": null
+  },
+  {
+    "code": "RBMSFH/BMSFH1",
+    "name": "Rafael Alberti",
+    "parent": "RBMSFH"
+  },
+  {
+    "code": "RBMSLE",
+    "name": "SAN LORENZO DE EL ESCORIAL. Biblioteca Municipal de San Lorenzo de El Escorial",
+    "parent": null
+  },
+  {
+    "code": "RBMSLE/BMSLE1",
+    "name": "Biblioteca Municipal Pedro Antonio de Alarcón",
+    "parent": "RBMSLE"
+  },
+  {
+    "code": "RBMSMV",
+    "name": "SAN MARTÍN DE LA VEGA. Biblioteca Municipal de San Martín de la Vega",
+    "parent": null
+  },
+  {
+    "code": "RBMSMV/BMSMV1",
+    "name": "Biblioteca Municipal Dos de Mayo",
+    "parent": "RBMSMV"
+  },
+  {
+    "code": "RBMSMI",
+    "name": "SAN MARTÍN DE VALDEIGLESIAS. Biblioteca Municipal de San Martín de Valdeiglesias",
+    "parent": null
+  },
+  {
+    "code": "RBMSMI/BMSMI1",
+    "name": "Biblioteca Municipal Miguel Hernández",
+    "parent": "RBMSMI"
+  },
+  {
+    "code": "RBMSSR",
+    "name": "SAN SEBASTIÁN DE LOS REYES. Bibliotecas Municipales de S. Sebastián de los Reyes",
+    "parent": null
+  },
+  {
+    "code": "RBMSSR/BMSSR2",
+    "name": "Biblioteca Municipal Claudio Rodríguez",
+    "parent": "RBMSSR"
+  },
+  {
+    "code": "RBMSSR/BMSSR1",
+    "name": "Biblioteca Municipal Marcos Ana",
+    "parent": "RBMSSR"
+  },
+  {
+    "code": "RBMSSR/BMSSR3",
+    "name": "Biblioteca Municipal Plaza de la Iglesia",
+    "parent": "RBMSSR"
+  },
+  {
+    "code": "RBMSMA",
+    "name": "SANTA MARÍA DE LA ALAMEDA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMSMA/BMSMA1",
+    "name": "Centro de Lectura de Santa María de la Alameda",
+    "parent": "RBMSMA"
+  },
+  {
+    "code": "MUNI",
+    "name": "Servicios de Extensión Bibliotecaria",
+    "parent": null
+  },
+  {
+    "code": "MUNI/BB01",
+    "name": "Bibliobuses",
+    "parent": "MUNI"
+  },
+  {
+    "code": "MUNI/BMETRO",
+    "name": "Bibliometro",
+    "parent": "MUNI"
+  },
+  {
+    "code": "MUNI/BRED",
+    "name": "Bibliored",
+    "parent": "MUNI"
+  },
+  {
+    "code": "MUNI/BP25",
+    "name": "Telebiblioteca",
+    "parent": "MUNI"
+  },
+  {
+    "code": "RBMSEV",
+    "name": "SEVILLA LA NUEVA. Biblioteca Municipal de Sevilla la Nueva",
+    "parent": null
+  },
+  {
+    "code": "RBMSEV/BMSEV1",
+    "name": "Biblioteca Municipal José Ángel Mañas",
+    "parent": "RBMSEV"
+  },
+  {
+    "code": "RBMSOT",
+    "name": "SOTO DEL REAL. Biblioteca Municipal de Soto de Real",
+    "parent": null
+  },
+  {
+    "code": "RBMSOT/BMSOT1",
+    "name": "Biblioteca Municipal Pedro de Lorenzo",
+    "parent": "RBMSOT"
+  },
+  {
+    "code": "RBMTAL",
+    "name": "TALAMANCA DE JARAMA. Biblioteca Municipal de Talamanca de Jarama",
+    "parent": null
+  },
+  {
+    "code": "RBMTAL/BMTAL1",
+    "name": "Biblioteca Municipal de Talamanca de Jarama",
+    "parent": "RBMTAL"
+  },
+  {
+    "code": "RBMTIE",
+    "name": "TIELMES. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMTIE/BMTIE1",
+    "name": "Biblioteca Municipal de Tielmes",
+    "parent": "RBMTIE"
+  },
+  {
+    "code": "RBMTOR",
+    "name": "TORREJÓN DE ARDOZ. Bibliotecas Municipales de Torrejón de Ardoz",
+    "parent": null
+  },
+  {
+    "code": "RBMTOR/BMTOR3",
+    "name": "Biblioteca Enrique Tierno Galván",
+    "parent": "RBMTOR"
+  },
+  {
+    "code": "RBMTOR/BMTOR2",
+    "name": "Biblioteca Federico García-Lorca",
+    "parent": "RBMTOR"
+  },
+  {
+    "code": "RBMTOR/BMTOR1",
+    "name": "Biblioteca Gabriel Celaya",
+    "parent": "RBMTOR"
+  },
+  {
+    "code": "RBMTOR/BMTOR4",
+    "name": "Biblioteca \"La Isla Misteriosa\"",
+    "parent": "RBMTOR"
+  },
+  {
+    "code": "RBMTRC",
+    "name": "TORREJÓN DE LA CALZADA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMTRC/BMTRC1",
+    "name": "Biblioteca Municipal María Moliner",
+    "parent": "RBMTRC"
+  },
+  {
+    "code": "RBMTRV",
+    "name": "TORREJÓN DE VELASCO. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMTRV/BMTRV1",
+    "name": "Biblioteca Municipal de Torrejón de Velasco",
+    "parent": "RBMTRV"
+  },
+  {
+    "code": "RBMTRG",
+    "name": "TORRELAGUNA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMTRG/BMTRG1",
+    "name": "Biblioteca Municipal Juan de Mena",
+    "parent": "RBMTRG"
+  },
+  {
+    "code": "RBMTRL",
+    "name": "TORRELODONES. Bibliotecas Municipales de Torrelodones",
+    "parent": null
+  },
+  {
+    "code": "RBMTRL/BMTRL1",
+    "name": "Biblioteca Municipal José de Vicente Muñoz",
+    "parent": "RBMTRL"
+  },
+  {
+    "code": "RBMTRL/BMTRL2",
+    "name": "Biblioteca Municipal Juan Van-Halen",
+    "parent": "RBMTRL"
+  },
+  {
+    "code": "RBMTRJ",
+    "name": "TORREMOCHA DE JARAMA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMTRJ/BMTRJ1",
+    "name": "Biblioteca Municipal de Torremocha de Jarama",
+    "parent": "RBMTRJ"
+  },
+  {
+    "code": "RBMTRA",
+    "name": "TORRES DE LA ALAMEDA. Biblioteca Municipal (CERRADA TEMPORALMENTE)",
+    "parent": null
+  },
+  {
+    "code": "RBMTRA/BMTRA1",
+    "name": "Biblioteca Municipal de Torres de la Alameda",
+    "parent": "RBMTRA"
+  },
+  {
+    "code": "RBMTRE",
+    "name": "TRES CANTOS. Bibliotecas Municipales Tres Cantos",
+    "parent": null
+  },
+  {
+    "code": "RBMTRE/BMTRE2",
+    "name": "Biblioteca Municipal Fundación Caja Madrid",
+    "parent": "RBMTRE"
+  },
+  {
+    "code": "RBMTRE/BMTRE1",
+    "name": "Biblioteca Municipal Lope de Vega",
+    "parent": "RBMTRE"
+  },
+  {
+    "code": "RBMVLM",
+    "name": "VALDEMANCO. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMVLM/BMVLM1",
+    "name": "Centro de Lectura de Valdemanco",
+    "parent": "RBMVLM"
+  },
+  {
+    "code": "RBMVDM",
+    "name": "VALDEMORILLO. Biblioteca Municipal de Valdemorillo",
+    "parent": null
+  },
+  {
+    "code": "RBMVDM/BMVDM1",
+    "name": "Biblioteca Municipal María Giralt",
+    "parent": "RBMVDM"
+  },
+  {
+    "code": "RBMVDE",
+    "name": "VALDEMORO. Bibliotecas Municipales de Valdemoro",
+    "parent": null
+  },
+  {
+    "code": "RBMVDE/BMVDE1",
+    "name": "Biblioteca Municipal Ana María Matute",
+    "parent": "RBMVDE"
+  },
+  {
+    "code": "RBMVDE/BMVDE3",
+    "name": "Biblioteca Municipal Centro de la Estación",
+    "parent": "RBMVDE"
+  },
+  {
+    "code": "RBMVDE/BMVDE2",
+    "name": "Biblioteca Municipal Juan Prado",
+    "parent": "RBMVDE"
+  },
+  {
+    "code": "RBMVAL",
+    "name": "VALDEOLMOS-ALALPARDO. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMVAL/BMVAL1",
+    "name": "Centro de Lectura de Valdeolmos-Alalpardo",
+    "parent": "RBMVAL"
+  },
+  {
+    "code": "RBMVDL",
+    "name": "VALDILECHA. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMVDL/BMVDL1",
+    "name": "Biblioteca Municipal de Valdilecha",
+    "parent": "RBMVDL"
+  },
+  {
+    "code": "RBMVEL",
+    "name": "VELILLA DE SAN ANTONIO. Biblioteca Municipal de Velilla de San Antonio",
+    "parent": null
+  },
+  {
+    "code": "RBMVEL/BMVEL1",
+    "name": "Biblioteca Municipal María Moliner",
+    "parent": "RBMVEL"
+  },
+  {
+    "code": "RBMVIP",
+    "name": "VILLA DEL PRADO. Biblioteca Municipal de Villa del Prado",
+    "parent": null
+  },
+  {
+    "code": "RBMVIP/BMVIP1",
+    "name": "Biblioteca Municipal Poetas del Alberche",
+    "parent": "RBMVIP"
+  },
+  {
+    "code": "RBMVLC",
+    "name": "VILLACONEJOS. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMVLC/BMVLC1",
+    "name": "Biblioteca Municipal Elena Soriano",
+    "parent": "RBMVLC"
+  },
+  {
+    "code": "RBMVIB",
+    "name": "VILLALBILLA. Bibliotecas Municipales de Villalbilla",
+    "parent": null
+  },
+  {
+    "code": "RBMVIB/BMVIB2",
+    "name": "Biblioteca Municipal de Villalbilla",
+    "parent": "RBMVIB"
+  },
+  {
+    "code": "RBMVIB/BMVIB1",
+    "name": "Biblioteca Municipal El Sauce",
+    "parent": "RBMVIB"
+  },
+  {
+    "code": "RBMVLT",
+    "name": "VILLAMANTA. Centro de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMVLT/BMVLT1",
+    "name": "Centro de Lectura de Villamanta",
+    "parent": "RBMVLT"
+  },
+  {
+    "code": "RBMVNV",
+    "name": "VILLANUEVA DE LA CAÑADA. Biblioteca Municipal de Villanueva de la Cañada",
+    "parent": null
+  },
+  {
+    "code": "RBMVNV/BMVNV1",
+    "name": "VILLANUEVA DE LA CAÑADA. Biblioteca Municipal Fernando Lázaro Carreter",
+    "parent": "RBMVNV"
+  },
+  {
+    "code": "RBMVIL",
+    "name": "VILLANUEVA DEL PARDILLO. Biblioteca Municipal de Villanueva del Pardillo",
+    "parent": null
+  },
+  {
+    "code": "RBMVIL/BMVIL1",
+    "name": "Biblioteca Municipal Luis Parra",
+    "parent": "RBMVIL"
+  },
+  {
+    "code": "RBMVRS",
+    "name": "VILLAREJO DE SALVANÉS. Biblioteca Municipal",
+    "parent": null
+  },
+  {
+    "code": "RBMVRS/BMVRS1",
+    "name": "Biblioteca Municipal Jacinto Benavente",
+    "parent": "RBMVRS"
+  },
+  {
+    "code": "RBMVVO",
+    "name": "VILLAVICIOSA DE ODÓN. Biblioteca Municipal de Villaviciosa de Odón",
+    "parent": null
+  },
+  {
+    "code": "RBMVVO/BMVVO1",
+    "name": "Biblioteca Municipal Luis de Góngora",
+    "parent": "RBMVVO"
+  },
+  {
+    "code": "RBMZAR",
+    "name": "ZARZALEJO. Centros de Lectura",
+    "parent": null
+  },
+  {
+    "code": "RBMZAR/BMZAR1",
+    "name": "Centro de Lectura de Zarzalejo Estación",
+    "parent": "RBMZAR"
+  },
+  {
+    "code": "RBMZAR/BMZAR2",
+    "name": "Centro de Lectura de Zarzalejo Pueblo",
+    "parent": "RBMZAR"
+  }
+]

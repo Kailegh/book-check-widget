@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@source "../content/**/*.js";
+@source "../options/**/*.{html,js}";
+@source "../popup/**/*.{html,js}";
+
+/* Goodreads sets `html { font-size: 62.5% }`, the 10px-root trick. `rem` always resolves
+   against the document root — a shadow root gives no protection — so every Tailwind size
+   would render at 62.5% on their pages. Pinning the scale to pixels makes the extension's
+   UI immune to whatever root size the host page picks. The values equal the defaults at a
+   16px root, so the options and popup pages look exactly as before. */
+@theme {
+  --spacing: 4px;
+
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+/* The dot and hover card render inside shadow roots, so the host element itself needs
+   neutral geometry: Goodreads' styles must not reach in, and ours must not leak out. */
+@layer base {
+  :host {
+    all: initial;
+    font-family: var(--font-sans);
+    line-height: 1.4;
+  }
+}

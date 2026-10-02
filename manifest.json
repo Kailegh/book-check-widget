@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Madrid Libraries for Goodreads",
+  "description": "Shows whether the books you see on Goodreads are on the shelf in Madrid's public libraries.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://gestiona.comunidad.madrid/*",
+    "https://openlibrary.org/*"
+  ],
+  "background": {
+    "service_worker": "src/bg/service_worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Disponibilidad en bibliotecas de Madrid"
+  },
+  "options_page": "src/options/options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.goodreads.com/review/list/*",
+        "https://www.goodreads.com/list/show/*",
+        "https://www.goodreads.com/search*",
+        "https://www.goodreads.com/book/show/*",
+        "https://www.goodreads.com/author/show/*",
+        "https://www.goodreads.com/recommendations*",
+        "https://www.goodreads.com/shelf/*",
+        "https://www.goodreads.com/user/show/*"
+      ],
+      "js": [
+        "src/content/extract.js",
+        "src/content/badge.js",
+        "src/content/goodreads.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/ui.css"
+      ],
+      "matches": [
+        "https://www.goodreads.com/*"
+      ]
+    }
+  ]
+}

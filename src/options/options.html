@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Bibliotecas preferidas</title>
+  <link rel="stylesheet" href="../../dist/ui.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <main class="mx-auto max-w-3xl p-6">
+    <h1 class="text-xl font-semibold">Bibliotecas preferidas</h1>
+    <p class="mt-1 text-sm text-slate-600">
+      Un punto <span class="font-semibold text-emerald-600">verde</span> en Goodreads significa
+      que el libro está en la estantería de una de estas bibliotecas ahora mismo.
+      <span class="font-semibold text-amber-600">Amarillo</span>, que está disponible pero en otra.
+    </p>
+
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      <input id="filter" type="search" placeholder="Buscar biblioteca o municipio…"
+        class="min-w-64 flex-1 rounded border border-slate-300 px-3 py-2 text-sm" />
+      <label class="flex items-center gap-2 text-sm" title="En otras páginas usa el botón de la extensión">
+        <input id="autoCheck" type="checkbox" class="size-4" />
+        Comprobar sola en «Want to Read» y en fichas de libro
+      </label>
+    </div>
+
+    <p id="summary" class="mt-3 text-sm font-medium text-slate-700"></p>
+    <div id="list" class="mt-2 space-y-2"></div>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

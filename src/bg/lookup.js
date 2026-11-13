@@ -88,9 +88,14 @@ async function resolve(book, settings, key, opac) {
   const surname = authorSurname(book.author);
   const baseIsbns = book.isbn ? [book.isbn] : [];
 
+  // An ISBN finds the exact edition even when the title index does not; the title search
+  // still runs, because other editions may be on a shelf when this one is not.
+  const isbnHits = book.isbn ? await opac.searchIsbn(book.isbn).catch(() => []) : [];
+
   // The catalogue indexes uniform titles, so the English title Goodreads shows often
   // finds the Spanish edition on its own.
   let { results, usedTitle } = await searchCandidates(opac, [title], surname);
+  results = dedupeByTitn([...isbnHits, ...results]);
   let wanted = { titles: [title], author: book.author, isbns: baseIsbns };
   let ranked = rankResults(results, wanted);
 

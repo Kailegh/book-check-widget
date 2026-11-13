@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { classifyStatus, parseHoldings } from '../src/bg/opac.js';
+import { classifyStatus, parseHoldings, parseIsbnSearch } from '../src/bg/opac.js';
 
 const html = readFileSync('test/fixtures/holdings.html', 'utf8');
 
@@ -56,4 +56,21 @@ test('result listings yield the record number, ISBNs and the original title', as
   // The uniform title is what lets an English Goodreads title match a Spanish edition.
   assert.deepEqual(first.originalTitles, ['The name of the wind']);
   assert.ok(results.every((r) => Number.isInteger(r.doc)));
+});
+
+// A single ISBN hit answers with the record page itself, not a results list.
+const record = `<span class="js-TITN">2250687</span><span class="js-LENG">spa</span>
+  <span class="js-T020a">9791370091408</span><span class="js-T100a">Wiswell, John (</span>
+  <span class="js-T245ab">Alguien en quien anidar / </span>`;
+
+test('an ISBN search that lands on the record page yields that record', () => {
+  const [found, ...rest] = parseIsbnSearch(record, '979-1370091408');
+  assert.equal(rest.length, 0);
+  assert.equal(found.titn, '2250687');
+  assert.equal(found.title, 'Alguien en quien anidar');
+  assert.equal(found.language, 'spa');
+});
+
+test('an ISBN search keeps only records that carry the ISBN', () => {
+  assert.deepEqual(parseIsbnSearch(record, '9780000000000'), []);
 });

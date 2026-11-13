@@ -9,7 +9,7 @@ const DAY = 24 * 60 * 60 * 1000;
 // Bump whenever a change alters what a cached verdict would say — a matching fix, a new
 // field, a different colour rule. Cached entries outlive the code that wrote them, so
 // without this a fixed bug keeps being shown from storage until its tier expires.
-export const CACHE_VERSION = 2;
+export const CACHE_VERSION = 3;
 const VERSION_KEY = 'cacheVersion';
 
 export const TIERS = {

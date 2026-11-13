@@ -94,7 +94,21 @@ export function createSession() {
     /** Warm the session up front so the first real query does not pay for it. */
     open: ensure,
 
-    /** Search by title and author. ISBN is not an indexed field; see docs/ARCHITECTURE.md. */
+    /**
+     * The catalogue's own keyword box (NT2, xsqf01). Unlike the fielded search below, it
+     * finds a record by ISBN.
+     */
+    async searchIsbn(isbn) {
+      const session = await ensure();
+      return parseIsbnSearch(await request(`${BASE}/${session}/NT2`, encodeForm({
+        ACC: '131',
+        START: '1',
+        FORM: '1',
+        xsqf01: isbn,
+      })), isbn);
+    },
+
+    /** Search by title and author. The fielded form cannot search by ISBN; see searchIsbn. */
     async search({ title, author }) {
       const session = await ensure();
       return parseResults(await request(`${BASE}/${session}/NT1`, encodeForm({
@@ -123,6 +137,37 @@ export function createSession() {
   };
 }
 
+/**
+ * One catalogue document, from a results-list item or a full record page. Both carry the
+ * same hidden js-* MARC fields; only the visible title and author markup differ.
+ */
+function parseDoc(html) {
+  const span = (className) => {
+    const match = html.match(new RegExp(`class="[^"]*${className}[^"]*"[^>]*>([\\s\\S]*?)<\\/span>`));
+    return match ? stripTags(match[1]) : '';
+  };
+  const marc = (field) => [...html.matchAll(new RegExp(`class="js-${field}"[^>]*>([^<]*)<`, 'g'))]
+    .map(([, value]) => decodeEntities(value).trim())
+    .filter(Boolean);
+
+  // js-T240 is the uniform title, which for a translation records the original
+  // title ("The name of the wind. Español"). That is what lets an English
+  // Goodreads title match a Spanish edition directly.
+  const originalTitles = marc('T240').map((value) => value.replace(/\.\s*[^.]*$/, '').trim());
+  const isbns = [...new Set([...marc('T020a'), ...marc('T020aq')]
+    .map((value) => value.replace(/[^0-9Xx]/g, ''))
+    .filter((value) => value.length === 13 || value.length === 10))];
+
+  return {
+    titn: marc('TITN')[0] ?? null,
+    title: (span('c-docs_title') || marc('T245ab')[0] || '').replace(/\s*\/\s*$/, ''),
+    author: span('c-docs_author') || marc('T100a')[0] || '',
+    originalTitles,
+    language: marc('LENG')[0] ?? null,
+    isbns,
+  };
+}
+
 export function parseResults(html) {
   const list = html.match(/<ol[^>]*class="c-docs[\s\S]*?<\/ol>/)?.[0];
   if (!list) return [];
@@ -131,34 +176,21 @@ export function parseResults(html) {
   for (const item of list.split(/<li\b/).slice(1)) {
     const doc = Number(item.match(/ACC=165&(?:amp;)?DOC=(\d+)/)?.[1]);
     if (!doc || results.some((entry) => entry.doc === doc)) continue;
-
-    const span = (className) => {
-      const match = item.match(new RegExp(`class="[^"]*${className}[^"]*"[^>]*>([\\s\\S]*?)<\\/span>`));
-      return match ? stripTags(match[1]) : '';
-    };
-    const marc = (field) => [...item.matchAll(new RegExp(`class="js-${field}"[^>]*>([^<]*)<`, 'g'))]
-      .map(([, value]) => decodeEntities(value).trim())
-      .filter(Boolean);
-
-    // js-T240 is the uniform title, which for a translation records the original
-    // title ("The name of the wind. Español"). That is what lets an English
-    // Goodreads title match a Spanish edition directly.
-    const originalTitles = marc('T240').map((value) => value.replace(/\.\s*[^.]*$/, '').trim());
-    const isbns = [...new Set([...marc('T020a'), ...marc('T020aq')]
-      .map((value) => value.replace(/[^0-9Xx]/g, ''))
-      .filter((value) => value.length === 13 || value.length === 10))];
-
-    results.push({
-      doc,
-      titn: marc('TITN')[0] ?? null,
-      title: span('c-docs_title').replace(/\s*\/\s*$/, ''),
-      author: span('c-docs_author'),
-      originalTitles,
-      language: marc('LENG')[0] ?? null,
-      isbns,
-    });
+    results.push({ doc, ...parseDoc(item) });
   }
   return results;
+}
+
+/**
+ * A keyword search answers with a results list, or, on a single hit, with the record page
+ * itself. Either way, only documents that actually carry the ISBN count: a keyword search
+ * for an ISBN the catalogue lacks still returns unrelated records.
+ */
+export function parseIsbnSearch(html, isbn) {
+  const docs = parseResults(html);
+  if (!docs.length && /class="js-TITN"/.test(html)) docs.push(parseDoc(html));
+  const wanted = isbn.replace(/[^0-9Xx]/g, '');
+  return docs.filter((doc) => doc.isbns.includes(wanted));
 }
 
 const STATUS_PATTERNS = [

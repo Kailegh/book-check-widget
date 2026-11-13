@@ -64,8 +64,8 @@ service, and each point below is load-bearing:
 | The base URL returns a meta-refresh carrying a session token; later requests go through `/<token>/NT1` | `getSession()` scrapes the token and reuses it |
 | One session serves many searches, but the token sometimes rotates | Always adopt the token the latest response hands back |
 | Search is `POST` with `ACC=131`; fields are `xsqf12`+`xsnf12=0` (title), `xsqf03` (author), `subcat` (branch) | `search()` in `opac.js` |
-| **ISBN is not an indexed field** — every query form returns zero | Matching must be fuzzy; see below |
-| Results *do* carry their ISBNs in a hidden MARC block | ISBNs verify a candidate even though they cannot find one |
+| The fielded search (`NT1`) cannot find an ISBN, but the keyword box (`NT2`, `xsqf01`) can; a single hit answers with the record page itself | `searchIsbn()` in `opac.js` |
+| A keyword search for an ISBN the catalogue lacks still returns unrelated records | Only documents whose hidden MARC block carries the ISBN count |
 | `js-T240` holds the **uniform title**: for a translation, the original title | An English Goodreads title finds the Spanish edition directly |
 | `?TITN=<n>` fetches a record by its stable number | Holdings cache per record and are reused across books |
 | Holdings are inlined, no AJAX; copy rows carry `data-disp`, branches carry `sucosu`/`sudesc` | Parsing is structural, not text-scraping |
@@ -79,9 +79,10 @@ MV3 service workers have **no `DOMParser`**, so all parsing in `opac.js` is stri
 
 ## Matching, and why it is the weak point
 
-Because the catalogue cannot be searched by ISBN, a book is found by title and author and
-then *verified*. `lookup.js:resolve()` runs:
+`lookup.js:resolve()` runs:
 
+0. When Goodreads gives an ISBN, search the keyword box for it. That finds the exact edition
+   even when the title index fails (a brand-new record can be missing from it).
 1. Search the catalogue with the Goodreads title, reduced by `coreTitle()` (series suffix and
    subtitle removed) and `searchQuery()` (distinct significant words).
 2. Score every result (`match.js:scoreResult`). An ISBN we already know outranks any title

@@ -1,7 +1,7 @@
 // Turning a Goodreads book into a catalogue verdict.
 //
-// The catalogue cannot be searched by ISBN, so lookups go by title and author and the
-// candidates are then *verified* against ISBNs we already know. When no ISBN confirms a
+// Candidates come from an ISBN search when Goodreads gives one, and from a title and author
+// search; all are then *verified* against ISBNs we already know. When no ISBN confirms a
 // match the verdict carries a lower confidence, which the hover card shows honestly.
 
 const STOP_WORDS = new Set(['the', 'a', 'an', 'of', 'and', 'el', 'la', 'los', 'las', 'un', 'una', 'de', 'y']);

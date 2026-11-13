@@ -13,7 +13,7 @@ Goodreads page
   └─ content/badge.js ......... a dot per cover; ONE shared overlay for the hover card
         │ chrome.runtime.sendMessage({type:'check', book})
         ▼
-  bg/service_worker.js ........ routes messages; serializes upstream requests
+  bg/service_worker.js ........ routes messages; pools upstream requests (5 lanes)
         │
   bg/lookup.js ................ the per-book pipeline
        ├─ bg/opac.js ........... the Madrid collective catalogue (absysNET)
@@ -33,7 +33,7 @@ Measured against the live catalogue: a warm search costs 260–900 ms and a hold
 
 Three things exploit that:
 
-- **A pool of three lanes** (`service_worker.js`), each with **its own catalogue session**.
+- **A pool of five lanes** (`service_worker.js`), each with **its own catalogue session**.
   Per-lane sessions are not optional: the OPAC rotates its token on responses, so two
   concurrent requests sharing one session would overwrite each other's.
 - **Parallel editions.** `lookup.js` fetches the best-matching edition alone — it is usually
@@ -46,8 +46,8 @@ Three things exploit that:
 Nine uncached books: **82 s serially, 33 s pooled** — and the old path additionally paid
 400 ms between every one of its 44 requests.
 
-Three lanes is a deliberate ceiling, not a tuning knob to raise. At observed latencies it
-works out to ~1.4 requests/second, comparable to a person clicking through the OPAC. The
+Five lanes is a deliberate ceiling, not a tuning knob to raise. At observed latencies it
+works out to roughly 2–3 requests/second, still modest for a public OPAC. The
 viewport gating keeps it bursty rather than sustained, and the caches mean a revisit costs
 nothing. Raising `LANES` or dropping `SPACING_MS` to make it feel snappier would trade that
 restraint for very little: the remaining time is the catalogue's own latency.

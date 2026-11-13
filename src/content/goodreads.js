@@ -9,7 +9,7 @@
   const badges = new Map();
   const pending = new Map();
   const queue = [];
-  const state = { queued: 0, done: 0, running: false, scanned: false };
+  const state = { queued: 0, done: 0, active: 0, scanned: false };
 
   const ask = (message) => new Promise((resolve) => {
     if (!namespace.extensionAlive()) { resolve({ ok: false, error: 'reloaded', gone: true }); return; }
@@ -53,20 +53,24 @@
 
   const payload = ({ title, author, isbn }) => ({ title, author, isbn });
 
-  async function drain() {
-    if (state.running) return;
-    state.running = true;
-    while (queue.length) {
-      const book = queue.shift();
-      const badge = badges.get(book.id);
-      const reply = await ask({ type: 'check', book: payload(book) });
-      if (reply?.gone) { shutdown(); break; }
-      state.done += 1;
-      if (!badge) continue;
-      if (reply?.ok) badge.set(reply.value.colour, reply.value);
-      else badge.set('error', { failed: true, error: reply?.error });
+  // As many in flight as the worker has lanes; the worker's pool does the throttling.
+  const IN_FLIGHT = 5;
+
+  async function check(book) {
+    const badge = badges.get(book.id);
+    const reply = await ask({ type: 'check', book: payload(book) });
+    if (reply?.gone) { shutdown(); return; }
+    state.done += 1;
+    if (!badge) return;
+    if (reply?.ok) badge.set(reply.value.colour, reply.value);
+    else badge.set('error', { failed: true, error: reply?.error });
+  }
+
+  function drain() {
+    while (state.active < IN_FLIGHT && queue.length) {
+      state.active += 1;
+      check(queue.shift()).finally(() => { state.active -= 1; drain(); });
     }
-    state.running = false;
   }
 
   async function enqueue(book) {

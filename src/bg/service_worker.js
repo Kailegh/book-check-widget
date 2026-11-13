@@ -10,10 +10,10 @@ import { createSession } from './opac.js';
 import { getSettings } from './settings.js';
 import * as cache from './cache.js';
 
-// Three lanes is a deliberate ceiling. The catalogue answers in roughly 0.3–2s, so three
-// in flight is well under a request per second each — comparable to a person clicking
-// through the OPAC, and far short of hammering a public service.
-const LANES = 3;
+// Five lanes is a deliberate ceiling. The catalogue answers in roughly 0.3–2s, so five
+// in flight is still well under a request per second each, and far short of hammering a
+// public service.
+const LANES = 5;
 const SPACING_MS = 250;
 
 const lanes = Array.from({ length: LANES }, () => ({

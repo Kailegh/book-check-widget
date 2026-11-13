@@ -41,6 +41,20 @@ const dedupeByTitn = (results) => {
   return results.filter(({ titn }) => titn && !seen.has(titn) && seen.add(titn));
 };
 
+/**
+ * Cache the holdings a search already returned with its record page, so they are not
+ * fetched again. True when they are on a preferred shelf, which settles the colour.
+ */
+async function keepHoldings(hits, preferred) {
+  let green = false;
+  for (const { titn, copies } of hits) {
+    if (!titn || !copies?.length) continue;
+    await cache.write('holdings', String(titn), copies);
+    green ||= decideStatus(copies, preferred).colour === 'green';
+  }
+  return green;
+}
+
 async function holdingsFor(opac, titn) {
   const { value } = await cache.through('holdings', String(titn), () => opac.fetchHoldings(titn));
   return value;
@@ -112,13 +126,17 @@ async function resolve(book, settings, key, opac) {
   const surname = authorSurname(book.author);
   const baseIsbns = book.isbn ? [book.isbn] : [];
 
-  // An ISBN finds the exact edition even when the title index does not; the title search
-  // still runs, because other editions may be on a shelf when this one is not.
+  // An ISBN finds the exact edition even when the title index does not. Other editions
+  // are still searched for, since one may be on a shelf when this one is not — unless
+  // this one is already on a preferred shelf, which nothing can improve on.
   const isbnHits = book.isbn ? await opac.searchIsbn(book.isbn).catch(() => []) : [];
+  const settled = await keepHoldings(isbnHits, settings.preferred);
 
   // The catalogue indexes uniform titles, so the English title Goodreads shows often
   // finds the Spanish edition on its own.
-  let { results, usedTitle } = await searchCandidates(opac, [title], surname);
+  let { results, usedTitle } = settled
+    ? { results: [], usedTitle: null }
+    : await searchCandidates(opac, [title], surname);
   results = dedupeByTitn([...isbnHits, ...results]);
   let wanted = { titles: [title], author: book.author, isbns: baseIsbns };
   let ranked = rankResults(results, wanted);
@@ -127,7 +145,7 @@ async function resolve(book, settings, key, opac) {
   // or gave us only foreign-language editions — the translation usually has many more
   // copies in Madrid, and may well be on a shelf near you when the English one is not.
   const noSpanishMatch = !ranked.some(({ result }) => result.language === 'spa');
-  if (noSpanishMatch) {
+  if (noSpanishMatch && !settled) {
     const { value: bridged } = await cache.through('bridge', key, () => spanishEditions({
       title, author: surname, isbn: book.isbn,
     }).catch(() => ({ titles: [], isbns: [] })));
@@ -172,6 +190,7 @@ async function resolve(book, settings, key, opac) {
   // and if it is already on a preferred shelf nothing else can improve on green. Only when
   // it does not settle the question are the rest fetched, and then all at once rather than
   // one after another.
+  await keepHoldings(results, settings.preferred);
   const copies = [...await holdingsFor(opac, editions[0])];
   if (editions.length > 1 && decideStatus(copies, settings.preferred).colour !== 'green') {
     const rest = await Promise.all(editions.slice(1).map((titn) => holdingsFor(opac, titn)));

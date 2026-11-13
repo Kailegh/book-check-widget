@@ -186,11 +186,12 @@ export function parseResults(html) {
 
 /**
  * A search answers with a results list, or, on a single hit, with the record page itself.
+ * The record page already lists the holdings, so they are kept rather than fetched again.
  */
 export function parseSearch(html) {
   const docs = parseResults(html);
   if (docs.length || !/class="js-TITN"/.test(html)) return docs;
-  return [parseDoc(html)];
+  return [{ ...parseDoc(html), copies: parseHoldings(html) }];
 }
 
 const STATUS_PATTERNS = [

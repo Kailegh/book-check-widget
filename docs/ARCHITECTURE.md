@@ -84,7 +84,9 @@ MV3 service workers have **no `DOMParser`**, so all parsing in `opac.js` is stri
 
 0. A listing that gave no ISBN (cover grids, Listopia, search) is completed from the book
    page's JSON-LD (`bg/goodreads.js`): ISBN, full title and author, cached per Goodreads ID.
-   Then, with an ISBN, search the keyword box for it.
+   Then, with an ISBN, search the keyword box for it. A single hit answers with the record
+   page, holdings included; those are cached rather than fetched again, and if they are
+   already on a preferred shelf the title search and Open Library are skipped entirely.
 1. Search the keyword box with the Goodreads title plus the author's surname (then without the
    surname), the title reduced by `coreTitle()` (series suffix and
    subtitle removed) and `searchQuery()` (distinct significant words).

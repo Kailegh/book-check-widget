@@ -221,7 +221,7 @@
   namespace.createBadge = async function createBadge(book) {
     const host = document.createElement('span');
     host.dataset.bcw = book.id;
-    host.style.cssText = 'position:absolute;top:2px;right:2px;z-index:900;';
+    host.style.cssText = 'position:absolute;top:2px;right:2px;z-index:1;';
     const attach = (mount) => {
       if (!host.isConnected) anchorFor(mount).append(host);
     };

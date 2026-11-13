@@ -155,3 +155,19 @@ test('a failed stylesheet is not memoised into every later badge', async () => {
     assert.ok(window.document.querySelector(`[data-bcw="${id}"]`), `badge ${id} was created`);
   }
 });
+
+test('a dot removed by a page re-render can be re-attached to the new cover', async () => {
+  const window = setup();
+  const { document } = window;
+  const badge = await window.__bcw.createBadge({ id: '1', mount: document.getElementById('img') });
+  badge.set('green', verdict);
+
+  // React replaces the cover block, taking our host with it.
+  document.getElementById('cover').outerHTML = '<div id="cover"><img id="img" /></div>';
+  assert.equal(document.querySelector('[data-bcw="1"]'), null);
+
+  badge.attach(document.getElementById('img'));
+  const host = document.querySelector('#cover > [data-bcw="1"]');
+  assert.ok(host, 'the dot is back over the new cover');
+  assert.match(host.shadowRoot.querySelector('.js-dot').className, /bg-emerald-500/, 'and keeps its verdict');
+});

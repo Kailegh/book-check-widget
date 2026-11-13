@@ -222,7 +222,10 @@
     const host = document.createElement('span');
     host.dataset.bcw = book.id;
     host.style.cssText = 'position:absolute;top:2px;right:2px;z-index:900;';
-    anchorFor(book.mount).append(host);
+    const attach = (mount) => {
+      if (!host.isConnected) anchorFor(mount).append(host);
+    };
+    attach(book.mount);
 
     const root = host.attachShadow({ mode: 'open' });
     root.adoptedStyleSheets = [await stylesheet()];
@@ -244,6 +247,8 @@
         dot.setAttribute('aria-label', verdict?.reason ?? DOT[state].label);
         if (overlay?.owner === owner) showCard(owner);
       },
+      // React pages (the book page) can re-render the cover and drop our host with it.
+      attach,
       remove: () => {
         if (overlay?.owner === owner) hideCard();
         host.remove();

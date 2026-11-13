@@ -101,7 +101,8 @@
   function scan() {
     state.scanned = true;
     for (const book of namespace.collectBooks()) {
-      if (badges.has(book.id) || !book.mount) continue;
+      if (!book.mount) continue;
+      if (badges.has(book.id)) { badges.get(book.id)?.attach(book.mount); continue; }
       // A single book page has nothing to scroll to; check it immediately.
       if (book.detailed) { enqueue(book); continue; }
       pending.set(book.mount, book);

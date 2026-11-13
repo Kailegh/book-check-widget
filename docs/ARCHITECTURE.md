@@ -83,6 +83,8 @@ MV3 service workers have **no `DOMParser`**, so all parsing in `opac.js` is stri
 
 0. When Goodreads gives an ISBN, search the keyword box for it. That finds the exact edition
    even when the title index fails (a brand-new record can be missing from it).
+0. A listing that gave no ISBN (cover grids, Listopia, search) is completed from the book
+   page's JSON-LD (`bg/goodreads.js`): ISBN, full title and author, cached per Goodreads ID.
 1. Search the catalogue with the Goodreads title, reduced by `coreTitle()` (series suffix and
    subtitle removed) and `searchQuery()` (distinct significant words).
 2. Score every result (`match.js:scoreResult`). An ISBN we already know outranks any title
@@ -102,6 +104,7 @@ than presenting a guess as fact.
 | Tier | Key | Lifetime | Why |
 |---|---|---|---|
 | `bridge` | normalized title+author | 90 days | Translated titles do not change |
+| `details` | Goodreads book ID | 90 days | A book's ISBN and author do not change |
 | `holdings` | record TITN | 6 hours | Loan state does |
 | `verdict` | title+author+**chosen branches** | 6 hours | The colour depends on which branches are yours |
 

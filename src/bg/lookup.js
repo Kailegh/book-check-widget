@@ -1,6 +1,7 @@
 // The per-book pipeline: Goodreads book in, catalogue verdict out.
 
 
+import { bookDetails } from './goodreads.js';
 import { spanishEditions } from './openlibrary.js';
 import * as cache from './cache.js';
 import {
@@ -65,7 +66,27 @@ async function searchCandidates(opac, titles, surname) {
 // Two tabs, or the same book twice on one page, must not both do the work.
 const inFlight = new Map();
 
-export async function lookup(book, settings, opac) {
+/**
+ * Fill in what a cover-only listing lacks from the Goodreads book page. A failed fetch is
+ * not cached, so it is retried next time; the book is then looked up as it came.
+ */
+async function withDetails(book) {
+  if (book.isbn || !/^\d+$/.test(book.id ?? '')) return book;
+  try {
+    const { value } = await cache.through('details', book.id, () => bookDetails(book.id));
+    return {
+      ...book,
+      title: value.title || book.title,
+      author: value.author || book.author,
+      isbn: value.isbn,
+    };
+  } catch {
+    return book;
+  }
+}
+
+export async function lookup(original, settings, opac) {
+  const book = await withDetails(original);
   const key = cacheKey(book, settings.preferred);
   const cached = await cache.read('verdict', key);
   if (cached) return { ...cached, fromCache: true };

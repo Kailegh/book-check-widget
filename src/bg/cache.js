@@ -14,6 +14,7 @@ const VERSION_KEY = 'cacheVersion';
 
 export const TIERS = {
   bridge: { prefix: 'ol:', ttl: 90 * DAY },
+  details: { prefix: 'gr:', ttl: 90 * DAY },
   holdings: { prefix: 'h:', ttl: 6 * 60 * 60 * 1000 },
   verdict: { prefix: 'av:', ttl: 6 * 60 * 60 * 1000 },
 };

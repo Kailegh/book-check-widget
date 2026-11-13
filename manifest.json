@@ -8,7 +8,8 @@
   ],
   "host_permissions": [
     "https://gestiona.comunidad.madrid/*",
-    "https://openlibrary.org/*"
+    "https://openlibrary.org/*",
+    "https://www.goodreads.com/*"
   ],
   "background": {
     "service_worker": "src/bg/service_worker.js",

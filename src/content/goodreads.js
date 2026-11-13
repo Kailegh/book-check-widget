@@ -51,7 +51,7 @@
     return settings;
   });
 
-  const payload = ({ title, author, isbn }) => ({ title, author, isbn });
+  const payload = ({ id, title, author, isbn }) => ({ id, title, author, isbn });
 
   // As many in flight as the worker has lanes; the worker's pool does the throttling.
   const IN_FLIGHT = 5;

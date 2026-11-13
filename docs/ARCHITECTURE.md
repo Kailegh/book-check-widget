@@ -63,8 +63,9 @@ service, and each point below is load-bearing:
 |---|---|
 | The base URL returns a meta-refresh carrying a session token; later requests go through `/<token>/NT1` | `getSession()` scrapes the token and reuses it |
 | One session serves many searches, but the token sometimes rotates | Always adopt the token the latest response hands back |
-| Search is `POST` with `ACC=131`; fields are `xsqf12`+`xsnf12=0` (title), `xsqf03` (author), `subcat` (branch) | `search()` in `opac.js` |
-| The fielded search (`NT1`) cannot find an ISBN, but the keyword box (`NT2`, `xsqf01`) can; a single hit answers with the record page itself | `searchIsbn()` in `opac.js` |
+| Search is the site's own keyword box: `POST` to `NT2` with `ACC=131`, `FORM=1`, `xsqf01` (any field) | `keyword()` in `opac.js` |
+| The fielded title/author form (`NT1`, `xsqf12`/`xsqf03`) misses records the keyword box finds, and answers some words with unrelated records | Not used |
+| An ISBN is only found as the record stores it, and many store it hyphenated (`978-84-16858-24-8`) | The title+surname search still runs; result lists carry normalized ISBNs, which confirm the match |
 | A keyword search for an ISBN the catalogue lacks still returns unrelated records | Only documents whose hidden MARC block carries the ISBN count |
 | `js-T240` holds the **uniform title**: for a translation, the original title | An English Goodreads title finds the Spanish edition directly |
 | `?TITN=<n>` fetches a record by its stable number | Holdings cache per record and are reused across books |
@@ -81,11 +82,11 @@ MV3 service workers have **no `DOMParser`**, so all parsing in `opac.js` is stri
 
 `lookup.js:resolve()` runs:
 
-0. When Goodreads gives an ISBN, search the keyword box for it. That finds the exact edition
-   even when the title index fails (a brand-new record can be missing from it).
 0. A listing that gave no ISBN (cover grids, Listopia, search) is completed from the book
    page's JSON-LD (`bg/goodreads.js`): ISBN, full title and author, cached per Goodreads ID.
-1. Search the catalogue with the Goodreads title, reduced by `coreTitle()` (series suffix and
+   Then, with an ISBN, search the keyword box for it.
+1. Search the keyword box with the Goodreads title plus the author's surname (then without the
+   surname), the title reduced by `coreTitle()` (series suffix and
    subtitle removed) and `searchQuery()` (distinct significant words).
 2. Score every result (`match.js:scoreResult`). An ISBN we already know outranks any title
    similarity — different editions share a title, so without this the right one would not

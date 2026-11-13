@@ -49,16 +49,19 @@ async function holdingsFor(opac, titn) {
 /**
  * Search the catalogue for the first candidate title that returns anything.
  * The English title is tried first because the catalogue indexes uniform titles, so a
- * translation is usually found without needing Open Library at all.
+ * translation is usually found without needing Open Library at all. Each title is tried
+ * with the author's surname, then without it, in case the catalogue spells it differently.
  */
 async function searchCandidates(opac, titles, surname) {
   const tried = new Set();
   for (const title of titles) {
     const query = searchQuery(title);
-    if (!query || tried.has(query)) continue;
-    tried.add(query);
-    const results = await opac.search({ title: query, author: surname });
-    if (results.length) return { results, usedTitle: title };
+    for (const author of new Set([surname, ''])) {
+      if (!query || tried.has(`${query}|${author}`)) continue;
+      tried.add(`${query}|${author}`);
+      const results = await opac.search({ title: query, author });
+      if (results.length) return { results, usedTitle: title };
+    }
   }
   return { results: [], usedTitle: null };
 }

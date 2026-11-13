@@ -4,8 +4,9 @@
 //   * The base URL answers with a meta-refresh carrying a session token. Every later
 //     request goes through /<token>/NT1. One token serves many searches, but it is
 //     sometimes rotated, so we always adopt the token the latest response hands back.
-//   * Searching is a POST with ACC=131. ISBN is not an indexed field, so lookups go by
-//     title + author and are disambiguated afterwards against ISBNs in the result list.
+//   * Searching is a POST to the site's own keyword box (NT2, ACC=131). It finds an ISBN
+//     only as the record stores it, often hyphenated, so title + author searches are
+//     disambiguated afterwards against the ISBNs every result carries.
 //   * Responses are ISO-8859-1. Decoding and encoding both matter: accented titles and
 //     author names will not match otherwise.
 //   * MV3 service workers have no DOMParser, so parsing is string based. The markup
@@ -88,6 +89,20 @@ export function createSession() {
     return token;
   }
 
+  /**
+   * The catalogue's own search box (NT2, any field). The fielded title/author form (NT1)
+   * misses records this one finds, and answers some words with unrelated records.
+   */
+  async function keyword(terms) {
+    const session = await ensure();
+    return parseSearch(await request(`${BASE}/${session}/NT2`, encodeForm({
+      ACC: '131',
+      START: '1',
+      FORM: '1',
+      xsqf01: terms,
+    })));
+  }
+
   return {
     reset() { token = null; },
 
@@ -95,30 +110,18 @@ export function createSession() {
     open: ensure,
 
     /**
-     * The catalogue's own keyword box (NT2, xsqf01). Unlike the fielded search below, it
-     * finds a record by ISBN.
+     * Only an ISBN stored exactly as given is found: many records store it hyphenated.
+     * Unrelated records come back for an ISBN the catalogue lacks, so only documents that
+     * carry it count.
      */
     async searchIsbn(isbn) {
-      const session = await ensure();
-      return parseIsbnSearch(await request(`${BASE}/${session}/NT2`, encodeForm({
-        ACC: '131',
-        START: '1',
-        FORM: '1',
-        xsqf01: isbn,
-      })), isbn);
+      const wanted = isbn.replace(/[^0-9Xx]/g, '');
+      return (await keyword(isbn)).filter((doc) => doc.isbns.includes(wanted));
     },
 
-    /** Search by title and author. The fielded form cannot search by ISBN; see searchIsbn. */
-    async search({ title, author }) {
-      const session = await ensure();
-      return parseResults(await request(`${BASE}/${session}/NT1`, encodeForm({
-        ACC: '131',
-        START: '1',
-        FORM: '2',
-        xsnf12: '0',
-        xsqf12: title,
-        xsqf03: author ?? '',
-      })));
+    /** Title words and author surname in one query, as a person would type them. */
+    search({ title, author }) {
+      return keyword([title, author].filter(Boolean).join(' '));
     },
 
     /** Every branch holding this record, keyed by the catalogue's stable record number. */
@@ -182,15 +185,12 @@ export function parseResults(html) {
 }
 
 /**
- * A keyword search answers with a results list, or, on a single hit, with the record page
- * itself. Either way, only documents that actually carry the ISBN count: a keyword search
- * for an ISBN the catalogue lacks still returns unrelated records.
+ * A search answers with a results list, or, on a single hit, with the record page itself.
  */
-export function parseIsbnSearch(html, isbn) {
+export function parseSearch(html) {
   const docs = parseResults(html);
-  if (!docs.length && /class="js-TITN"/.test(html)) docs.push(parseDoc(html));
-  const wanted = isbn.replace(/[^0-9Xx]/g, '');
-  return docs.filter((doc) => doc.isbns.includes(wanted));
+  if (docs.length || !/class="js-TITN"/.test(html)) return docs;
+  return [parseDoc(html)];
 }
 
 const STATUS_PATTERNS = [
